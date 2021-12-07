@@ -1,0 +1,95 @@
+{
+  "name": "MyImage",
+  "icon": "example-thumbnail.png",
+  "displayName": {
+    "en": "MyImage",
+    "ja": "プラグイン名"
+  },
+  "defaultWidth": 300,
+  "defaultHeight": 178,
+  "minWidth": 100,
+  "resizeX": true,
+  "resizeY": true,
+  "props": [
+    {
+      "name": "source",
+      "type": "image",
+      "displayName": {
+        "en": "My Image",
+        "ja": "My Image"
+      }
+    },
+    {
+      "name": "resizeMode",
+      "displayName": {
+        "en": "Image Cropping",
+        "ja": "Image Cropping"
+      },
+      "type": "text",
+      "default": "cover",
+      "control": {
+        "type": "menu",
+        "options": [
+          { "label": "Crop Image to Fill Space", "value": "cover" },
+          { "label": "Show Full Image (Don't Crop)", "value": "contain" }
+        ]
+      }
+    },
+    {
+      "name": "onPress",
+      "displayName": {
+        "en": "Click Flow",
+        "ja": "Click Flow"
+      },
+      "type": "action"
+    },
+    {
+      "name": "borderColor",
+      "type": "text",
+      "displayName": {
+        "en": "Border Color",
+        "ja": "Border Color"
+      },
+      "enabled": {
+        "showProp": true
+      },
+      "default": "#ffffff"
+    },
+    {
+      "name": "borderStyle",
+      "type": "text",
+      "displayName": {
+        "en": "Border Style",
+        "ja": "Border Style"
+      },
+      "enabled": {
+        "showProp": true
+      },
+      "default": "none"
+    },
+    {
+      "name": "borderWidth",
+      "type": "number",
+      "displayName": {
+        "en": "Border Width",
+        "ja": "Border Width"
+      },
+      "enabled": {
+        "showProp": true
+      },
+      "default": 0
+    },
+    {
+      "name": "borderRadius",
+      "type": "number",
+      "displayName": {
+        "en": "Border Radius",
+        "ja": "Border Radius"
+      },
+      "enabled": {
+        "showProp": true
+      },
+      "default": 4
+    }
+  ]
+}
