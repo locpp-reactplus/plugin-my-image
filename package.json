@@ -1,5 +1,5 @@
 {
-  "name": "@nocodejapan/my-image",
+  "name": "@nocodejapan/my-image-nam",
   "description": "Plugin description",
   "version": "1.0.0",
   "main": "index.js",
@@ -12,7 +12,7 @@
   },
   "click": {
     "logo": "./example-logo.png",
-    "displayName": "my image",
+    "displayName": "my image nam",
     "components": [
       {
         "name": "MyImage",

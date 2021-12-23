@@ -12,11 +12,26 @@ function MyImage({ attributes, width, height, hidden, onPress, ...rest }) {
     borderWidth,
     borderStyle,
     opacity,
+    source,
   } = attributes;
 
   if (hidden) {
     return <Fragment />;
   }
+
+  const getSourceImage = () => {
+    const defaultSource =
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Picture_icon_BLACK.svg/271px-Picture_icon_BLACK.svg.png";
+    if (!source) {
+      return defaultSource;
+    } else if (typeof source === "string") {
+      return source;
+    } else {
+      return (
+        source?.url || source?.binding?.options?.placeholderImage || source[0]
+      );
+    }
+  };
 
   return (
     <TouchableOpacity onPress={onPress}>
@@ -38,7 +53,7 @@ function MyImage({ attributes, width, height, hidden, onPress, ...rest }) {
             borderStyle,
           }}
           source={{
-            uri: "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
+            uri: `${getSourceImage()}`,
           }}
         />
       </View>
