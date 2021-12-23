@@ -28,7 +28,10 @@ function MyImage({ attributes, width, height, hidden, onPress, ...rest }) {
       return source;
     } else {
       return (
-        source?.url || source?.binding?.options?.placeholderImage || source[0]
+        source?.url ||
+        source?.binding?.options?.placeholderImage ||
+        source[0] ||
+        defaultSource
       );
     }
   };
