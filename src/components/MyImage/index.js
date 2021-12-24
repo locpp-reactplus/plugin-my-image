@@ -53,7 +53,7 @@ function MyImage({ attributes, width, height, hidden, onPress, ...rest }) {
             borderRadius,
             borderColor,
             borderWidth,
-            borderStyle,
+            // borderStyle,
           }}
           source={{
             uri: `${getSourceImage()}`,
